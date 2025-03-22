@@ -56,3 +56,9 @@ ip addr add 192.168.23.36/24 brd 192.168.23.255 dev eth0
 ip addr show dev eth0  
 ip addr del 192.168.23.36/24 dev eth0  
 
+## simulate CPU high usages  
+### command yes for eight cpu core  
+```
+for i in {1..8}; do yes > /dev/null & done
+pkill yes
+```
